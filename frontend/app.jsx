@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup, Circle, CircleMarker } from 'react-leaflet';
+import L from 'leaflet';
 
 //Mapbox base map info
 const accessToken = "pk.eyJ1Ijoic2NvdHQwNjIiLCJhIjoiY2p5bHpuczh4MGR4ZTNscXVyODltZXIzbCJ9.gdmp7BhGHT0YVUMFfgh_gg"
@@ -48,15 +49,17 @@ class App extends Component {
         />
       {conflicts.map(conflict => {
         return (
-          <Marker
+          <CircleMarker
             key={conflict.properties.id}
-            position={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
+            color="red"
+            radius={5}
+            center={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
             >
             <Popup key={`pop_${conflict.properties.id}`}>
               <div>Notes: {conflict.properties.notes}</div>
               <div>Fatalities: {conflict.properties.fatalities}</div>
             </Popup>
-          </Marker>
+          </CircleMarker>
         )
       })}
       </Map>
