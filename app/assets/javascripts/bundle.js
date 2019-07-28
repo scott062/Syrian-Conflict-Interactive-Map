@@ -136,8 +136,8 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this));
     _this.state = {
-      zoom: 4,
-      mapCenter: [34.8021, 38.9968]
+      zoom: 6.5,
+      mapCenter: [34.854, 38.995]
     };
     return _this;
   }
@@ -155,12 +155,7 @@ function (_Component) {
         center: this.state.mapCenter,
         zoom: this.state.zoom,
         maxZoom: maxZoom
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["TileLayer"], {
-        attribution: attribution,
-        url: tileUrl,
-        id: 'mapbox.satellite',
-        accessToken: accessToken
-      }));
+      });
     }
   }]);
 

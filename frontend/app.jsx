@@ -12,8 +12,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      zoom: 4,
-      mapCenter: [34.8021, 38.9968]
+      zoom: 6.5,
+      mapCenter: [34.854, 38.995]
     }
   }
 
@@ -26,12 +26,7 @@ class App extends Component {
         zoom={this.state.zoom}
         maxZoom={maxZoom}
         >
-        <TileLayer
-          attribution={attribution}
-          url={tileUrl}
-          id={'mapbox.satellite'}
-          accessToken={accessToken}
-        />
+        
       </Map>
     )
   }
