@@ -120,7 +120,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
  //Mapbox base map info
 
 var accessToken = "pk.eyJ1Ijoic2NvdHQwNjIiLCJhIjoiY2p5bHpuczh4MGR4ZTNscXVyODltZXIzbCJ9.gdmp7BhGHT0YVUMFfgh_gg";
-var tileUrl = 'https://api.tiles.mapbox/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
+var tileUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
 var attribution = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
 var maxZoom = 19;
 
@@ -155,7 +155,12 @@ function (_Component) {
         center: this.state.mapCenter,
         zoom: this.state.zoom,
         maxZoom: maxZoom
-      });
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["TileLayer"], {
+        attribution: attribution,
+        url: tileUrl,
+        id: 'mapbox.streets',
+        accessToken: accessToken
+      }));
     }
   }]);
 
