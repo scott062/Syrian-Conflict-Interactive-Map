@@ -458,3 +458,94 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 24ms (Views: 21.3ms)
 
 
+Started GET "/" for ::1 at 2019-07-28 13:19:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:19:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 16.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:19:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:19:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:19:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 15.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:29:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 16.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:30:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 307ms (Views: 305.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:30:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 16.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:31:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 15.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:31:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:32:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 28ms (Views: 25.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:32:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 13:35:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.4ms)
+
+
