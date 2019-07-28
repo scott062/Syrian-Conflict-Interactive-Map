@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup, Circle, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
+import Navbar from './Components/Navbar';
 
 //Mapbox base map info
 const accessToken = "pk.eyJ1Ijoic2NvdHQwNjIiLCJhIjoiY2p5bHpuczh4MGR4ZTNscXVyODltZXIzbCJ9.gdmp7BhGHT0YVUMFfgh_gg"
@@ -34,35 +35,38 @@ class App extends Component {
   render() {
     const conflicts = this.state.conflicts
     return (
-      <Map
-        ref={m => { this.leafletMap = m}}
-        id="map"
-        center={this.state.mapCenter}
-        zoom={this.state.zoom}
-        maxZoom={maxZoom}
-        >
-        <TileLayer
-          attribution={attribution}
-          url={tileUrl}
-          id={'mapbox.dark'}
-          accessToken={accessToken}
-        />
-      {conflicts.map(conflict => {
-        return (
-          <CircleMarker
-            key={conflict.properties.id}
-            color="red"
-            radius={5}
-            center={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
-            >
-            <Popup key={`pop_${conflict.properties.id}`}>
-              <div>Notes: {conflict.properties.notes}</div>
-              <div>Fatalities: {conflict.properties.fatalities}</div>
-            </Popup>
-          </CircleMarker>
-        )
-      })}
-      </Map>
+      <div>
+        <Navbar/>
+        <Map
+          ref={m => { this.leafletMap = m}}
+          id="map"
+          center={this.state.mapCenter}
+          zoom={this.state.zoom}
+          maxZoom={maxZoom}
+          >
+          <TileLayer
+            attribution={attribution}
+            url={tileUrl}
+            id={'mapbox.dark'}
+            accessToken={accessToken}
+          />
+        {conflicts.map(conflict => {
+          return (
+            <CircleMarker
+              key={conflict.properties.id}
+              color="red"
+              radius={5}
+              center={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
+              >
+              <Popup key={`pop_${conflict.properties.id}`}>
+                <div>Notes: {conflict.properties.notes}</div>
+                <div>Fatalities: {conflict.properties.fatalities}</div>
+              </Popup>
+            </CircleMarker>
+          )
+        })}
+        </Map>
+      </div>
     )
   }
 }
