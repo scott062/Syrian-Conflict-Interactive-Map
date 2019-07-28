@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Image, Menu, Sidebar, Popup } from 'semantic-ui-react';
-import filterIcon from '../../app/assets/images/white-controls.png';
-
+import { Image, Menu, Sidebar, Popup, Button, Icon } from 'semantic-ui-react';
+import Filters from './Filters'
 
 class Navbar extends Component {
 
@@ -17,10 +16,13 @@ class Navbar extends Component {
           vertical
           visible={true}
           width='thin'
+          basic
         />
           <Popup trigger={
-            <Menu.Item as='a'>
-              <Image src={filterIcon} style={{width: '50%', margin: '10% auto'}}/>
+            <Menu.Item as='a' style={{width: '50%', margin: '10% auto'}}>
+              <Button icon>
+                <Icon name='filter' />
+              </Button>
             </Menu.Item>
           }
           content='Filter Events'
