@@ -158,7 +158,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["TileLayer"], {
         attribution: attribution,
         url: tileUrl,
-        id: 'mapbox.streets',
+        id: 'mapbox.dark',
         accessToken: accessToken
       }));
     }
