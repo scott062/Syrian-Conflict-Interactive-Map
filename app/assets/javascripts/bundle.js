@@ -148,9 +148,14 @@ function (_Component) {
   _createClass(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      this.fetchConflicts();
+    }
+  }, {
+    key: "fetchConflicts",
+    value: function fetchConflicts() {
       var _this2 = this;
 
-      _util_api_util__WEBPACK_IMPORTED_MODULE_2__["fetchConflicts"]().then(function (res) {
+      fetch('http://localhost:3000/api/conflicts').then(function (res) {
         return res.json();
       }).then(function (data) {
         _this2.setState({
@@ -163,6 +168,7 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
+      var conflicts = this.state.conflicts;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Map"], {
         ref: function ref(m) {
           _this3.leafletMap = m;
@@ -176,6 +182,11 @@ function (_Component) {
         url: tileUrl,
         id: 'mapbox.dark',
         accessToken: accessToken
+      }), conflicts.map(function (conflict) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
+          key: conflict.properties.id,
+          position: [conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]
+        });
       }));
     }
   }]);

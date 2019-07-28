@@ -20,10 +20,19 @@ class App extends Component {
   }
 
   componentDidMount() {
-    APIUtil.fetchConflicts().then(res => res.json()).then(data => { this.setState({conflicts: data.features})})
+    this.fetchConflicts()
+  }
+
+  fetchConflicts() {
+    fetch('http://localhost:3000/api/conflicts')
+    .then(res => res.json())
+    .then( data => {
+      this.setState({conflicts: data.features})
+    })
   }
 
   render() {
+    const conflicts = this.state.conflicts
     return (
       <Map
         ref={m => { this.leafletMap = m}}
@@ -38,6 +47,15 @@ class App extends Component {
           id={'mapbox.dark'}
           accessToken={accessToken}
         />
+      {conflicts.map(conflict => {
+        return (
+          <Marker
+            key={conflict.properties.id}
+            position={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
+            >
+          </Marker>
+        )
+      })}
       </Map>
     )
   }
