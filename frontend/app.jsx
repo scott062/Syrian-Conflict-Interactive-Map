@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 
 //Mapbox base map info
-const accessToken
-const tileUrl
-const attribution
-const maxZoom 
+const accessToken = "pk.eyJ1Ijoic2NvdHQwNjIiLCJhIjoiY2p5bHpuczh4MGR4ZTNscXVyODltZXIzbCJ9.gdmp7BhGHT0YVUMFfgh_gg"
+const tileUrl = 'https://api.tiles.mapbox/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}'
+const attribution = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
+const maxZoom = 19
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      zoom: 12,
+      zoom: 4,
       mapCenter: [34.8021, 38.9968]
     }
   }
@@ -29,10 +29,12 @@ class App extends Component {
         <TileLayer
           attribution={attribution}
           url={tileUrl}
-          id={'mapbox.dark'}
+          id={'mapbox.satellite'}
           accessToken={accessToken}
         />
       </Map>
     )
   }
 }
+
+export default App;
