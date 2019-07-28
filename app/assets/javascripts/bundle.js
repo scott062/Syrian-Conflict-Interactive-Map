@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./frontend/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./frontend/index.jsx");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./frontend/index.js":
-/*!***************************!*\
-  !*** ./frontend/index.js ***!
-  \***************************/
+/***/ "./frontend/index.jsx":
+/*!****************************!*\
+  !*** ./frontend/index.jsx ***!
+  \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
