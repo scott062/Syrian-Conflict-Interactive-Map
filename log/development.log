@@ -5,3 +5,98 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 21ms (Views: 9.9ms)
 
 
+Started GET "/api/conflicts" for ::1 at 2019-07-28 09:46:18 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (5.2ms)
+Completed 500 Internal Server Error in 3062ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    3:   json.array! @conflicts do |conflict|
+    4:     json.type "Feature"
+    5:     json.set! "properties" do
+    6:       json.id conflict["data_id"]
+    7:       json.region conflict["region"]
+    8:       json.notes conflict["notes"]
+    9:       json.fatalities conflict["fatalities"]
+  
+app/views/api/conflicts/index.json.jbuilder:6:in `[]'
+app/views/api/conflicts/index.json.jbuilder:6:in `block (3 levels) in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127677993840'
+app/views/api/conflicts/index.json.jbuilder:5:in `block (2 levels) in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127677993840'
+app/views/api/conflicts/index.json.jbuilder:3:in `block in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127677993840'
+app/views/api/conflicts/index.json.jbuilder:2:in `_app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127677993840'
+Started GET "/api/conflicts" for ::1 at 2019-07-28 09:48:47 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (2.6ms)
+Completed 500 Internal Server Error in 2770ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    4:     json.type "Feature"
+    5:     json.set! "properties" do
+    6:       
+    7:       json.region conflict["region"]
+    8:       json.notes conflict["notes"]
+    9:       json.fatalities conflict["fatalities"]
+   10:     end
+  
+app/views/api/conflicts/index.json.jbuilder:7:in `[]'
+app/views/api/conflicts/index.json.jbuilder:7:in `block (3 levels) in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127666649760'
+app/views/api/conflicts/index.json.jbuilder:5:in `block (2 levels) in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127666649760'
+app/views/api/conflicts/index.json.jbuilder:3:in `block in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127666649760'
+app/views/api/conflicts/index.json.jbuilder:2:in `_app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127666649760'
+Started GET "/api/conflicts" for ::1 at 2019-07-28 09:49:16 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (2.6ms)
+Completed 500 Internal Server Error in 2656ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    3:   json.array! @conflicts do |conflict|
+    4:     json.type "Feature"
+    5:     json.set! "properties" do
+    6:       json.id conflict["data_id"]
+    7:       json.region conflict["region"]
+    8:       json.notes conflict["notes"]
+    9:       json.fatalities conflict["fatalities"]
+  
+app/views/api/conflicts/index.json.jbuilder:6:in `[]'
+app/views/api/conflicts/index.json.jbuilder:6:in `block (3 levels) in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127679900660'
+app/views/api/conflicts/index.json.jbuilder:5:in `block (2 levels) in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127679900660'
+app/views/api/conflicts/index.json.jbuilder:3:in `block in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127679900660'
+app/views/api/conflicts/index.json.jbuilder:2:in `_app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127679900660'
+Started GET "/api/conflicts" for ::1 at 2019-07-28 09:49:58 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (56466.6ms)
+Completed 500 Internal Server Error in 59046ms
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    4:     debugger
+    5:     json.type "Feature"
+    6:     json.set! "properties" do
+    7:       json.id conflict["data_id"]
+    8:       json.region conflict["region"]
+    9:       json.notes conflict["notes"]
+   10:       json.fatalities conflict["fatalities"]
+  
+app/views/api/conflicts/index.json.jbuilder:7:in `[]'
+app/views/api/conflicts/index.json.jbuilder:7:in `block (3 levels) in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127718717920'
+app/views/api/conflicts/index.json.jbuilder:6:in `block (2 levels) in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127718717920'
+app/views/api/conflicts/index.json.jbuilder:3:in `block in _app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127718717920'
+app/views/api/conflicts/index.json.jbuilder:2:in `_app_views_api_conflicts_index_json_jbuilder___4597261210501607377_70127718717920'
+Started GET "/api/conflicts" for ::1 at 2019-07-28 09:51:10 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (56.8ms)
+Completed 200 OK in 2732ms (Views: 63.7ms)
+
+
