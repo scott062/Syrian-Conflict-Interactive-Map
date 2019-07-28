@@ -208,3 +208,24 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 11ms (Views: 6.4ms)
 
 
+Started GET "/" for ::1 at 2019-07-28 10:56:37 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/scott/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/scott/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 11ms (Views: 6.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 10:56:40 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/scott/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/scott/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 10ms (Views: 6.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 10:56:41 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/scott/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/scott/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 11ms (Views: 6.6ms)
+
+
