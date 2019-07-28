@@ -186,7 +186,9 @@ function (_Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
           key: conflict.properties.id,
           position: [conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]
-        });
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Popup"], {
+          key: "pop_".concat(conflict.properties.id)
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Notes: ", conflict.properties.notes), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Fatalities: ", conflict.properties.fatalities)));
       }));
     }
   }]);

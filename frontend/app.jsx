@@ -53,6 +53,10 @@ class App extends Component {
             key={conflict.properties.id}
             position={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
             >
+            <Popup key={`pop_${conflict.properties.id}`}>
+              <div>Notes: {conflict.properties.notes}</div>
+              <div>Fatalities: {conflict.properties.fatalities}</div>
+            </Popup>
           </Marker>
         )
       })}
