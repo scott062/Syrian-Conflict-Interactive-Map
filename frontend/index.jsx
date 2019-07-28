@@ -3,5 +3,5 @@ import ReactDOM from 'react-dom';
 
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('root');
-  ReactDOM.render(<h1>My App</h1>, rootEl)
+  ReactDOM.render(<h1>Syrian Map App</h1>, rootEl)
 });
