@@ -1864,3 +1864,59 @@ Processing by Api::ConflictsController#index as JSON
 Completed 200 OK in 2818ms (Views: 61.1ms)
 
 
+Started GET "/" for ::1 at 2019-07-28 17:54:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.3ms)
+
+
+Started GET "/api/conflicts" for ::1 at 2019-07-28 17:54:01 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (6517.8ms)
+Completed 200 OK in 74346ms (Views: 6526.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 17:56:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 16.6ms)
+
+
+Started GET "/api/conflicts" for ::1 at 2019-07-28 17:56:48 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (78.1ms)
+Completed 200 OK in 2959ms (Views: 85.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 17:57:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.9ms)
+
+
+Started GET "/api/conflicts" for ::1 at 2019-07-28 17:57:06 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (155.9ms)
+Completed 200 OK in 8519ms (Views: 162.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-28 17:57:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.6ms)
+
+
+Started GET "/api/conflicts" for ::1 at 2019-07-28 17:57:33 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (370.1ms)
+Completed 200 OK in 5821ms (Views: 376.9ms)
+
+
