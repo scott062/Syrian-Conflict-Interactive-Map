@@ -136,7 +136,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this));
     _this.state = {
-      zoom: 6.5,
+      zoom: 8,
       mapCenter: [34.854, 38.995]
     };
     return _this;

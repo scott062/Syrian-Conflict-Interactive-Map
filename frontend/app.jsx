@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      zoom: 6.5,
+      zoom: 8,
       mapCenter: [34.854, 38.995]
     }
   }
