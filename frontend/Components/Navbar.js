@@ -9,8 +9,8 @@ class Navbar extends Component {
       <div>
         <Sidebar
           as={Menu}
-          direction='right'
           animation='overlay'
+          direction='right'
           icon='labeled'
           inverted
           vertical
@@ -18,17 +18,6 @@ class Navbar extends Component {
           width='thin'
           basic
         />
-          <Popup trigger={
-            <Menu.Item as='a' style={{width: '50%', margin: '10% auto'}}>
-              <Button icon>
-                <Icon name='filter' />
-              </Button>
-            </Menu.Item>
-          }
-          content='Filter Events'
-          position='left center'
-          basic
-          />
       </div>
 
     )

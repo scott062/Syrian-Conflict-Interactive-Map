@@ -210,28 +210,13 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
         as: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"],
-        direction: "right",
         animation: "overlay",
+        direction: "right",
         icon: "labeled",
         inverted: true,
         vertical: true,
         visible: true,
         width: "thin",
-        basic: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Popup"], {
-        trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
-          as: "a",
-          style: {
-            width: '50%',
-            margin: '10% auto'
-          }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], {
-          icon: true
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-          name: "filter"
-        }))),
-        content: "Filter Events",
-        position: "left center",
         basic: true
       }));
     }
