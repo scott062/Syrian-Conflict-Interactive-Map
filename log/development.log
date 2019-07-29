@@ -3140,3 +3140,17 @@ Processing by Api::ConflictsController#index as JSON
 Completed 200 OK in 2496ms (Views: 93.1ms)
 
 
+Started GET "/" for ::1 at 2019-07-29 12:39:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 17.5ms)
+
+
+Started GET "/api/conflicts" for ::1 at 2019-07-29 12:39:34 -0400
+Processing by Api::ConflictsController#index as JSON
+  Rendering api/conflicts/index.json.jbuilder
+  Rendered api/conflicts/index.json.jbuilder (90.3ms)
+Completed 200 OK in 6025ms (Views: 97.4ms)
+
+
