@@ -36,7 +36,13 @@ class App extends Component {
     const conflicts = this.state.conflicts
     return (
       <div>
+        <Sidebar.Pushable
+          as={Segment}
+          style={{height: '100vh', overflow: 'hidden'}}
+        >
         <Navbar/>
+        <Sidebar.Pusher
+          style={{height: '100vh', color: 'green'}}>
         <Map
           ref={m => { this.leafletMap = m}}
           id="map"
@@ -66,6 +72,8 @@ class App extends Component {
           )
         })}
         </Map>
+      </Sidebar.Pusher>
+      </Sidebar.Pushable>
       </div>
     )
   }

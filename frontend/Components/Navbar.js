@@ -12,7 +12,7 @@ class Navbar extends Component {
   handleFilter() {
     this.setState({ filterShow: !this.state.filterShow })
   }
-  
+
   render() {
     return (
       <div>
@@ -27,6 +27,7 @@ class Navbar extends Component {
           width='thin'
           basic
         />
+      <Filters/>
       </div>
 
     )

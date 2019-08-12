@@ -232,7 +232,7 @@ function (_Component) {
         visible: true,
         width: "thin",
         basic: true
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filters__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -329,7 +329,18 @@ function (_Component) {
       var _this3 = this;
 
       var conflicts = this.state.conflicts;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Map"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Sidebar.Pushable, {
+        as: Segment,
+        style: {
+          height: '100vh',
+          overflow: 'hidden'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Sidebar.Pusher, {
+        style: {
+          height: '100vh',
+          color: 'green'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Map"], {
         ref: function ref(m) {
           _this3.leafletMap = m;
         },
@@ -351,7 +362,7 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Popup"], {
           key: "pop_".concat(conflict.properties.id)
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Notes: ", conflict.properties.notes), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Fatalities: ", conflict.properties.fatalities)));
-      })));
+      })))));
     }
   }]);
 
