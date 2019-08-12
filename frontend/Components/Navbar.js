@@ -3,11 +3,16 @@ import { Image, Menu, Sidebar, Popup, Button, Icon } from 'semantic-ui-react';
 import Filters from './Filters'
 
 class Navbar extends Component {
-  state = {
-    filterShow: false,
+  constructor(props) {
+    super(props);
+    this.state = { filterShow: false }
+    this.handleFilter = this.handleFilter.bind(this);
   }
 
-  handleFilter = () => this.setState({ filterVisibility: !this.state.filterShow} )
+  handleFilter() {
+    this.setState({ filterShow: !this.state.filterShow })
+  }
+  
   render() {
     return (
       <div>
