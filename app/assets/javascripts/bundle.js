@@ -254,10 +254,11 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/Navbar */ "./frontend/Components/Navbar.js");
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/Navbar */ "./frontend/Components/Navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -275,6 +276,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -329,18 +331,18 @@ function (_Component) {
       var _this3 = this;
 
       var conflicts = this.state.conflicts;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Sidebar.Pushable, {
-        as: Segment,
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pushable, {
+        as: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Segment"],
         style: {
           height: '100vh',
           overflow: 'hidden'
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Sidebar.Pusher, {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pusher, {
         style: {
           height: '100vh',
           color: 'green'
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Map"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_2__["Map"], {
         ref: function ref(m) {
           _this3.leafletMap = m;
         },
@@ -348,18 +350,18 @@ function (_Component) {
         center: this.state.mapCenter,
         zoom: this.state.zoom,
         maxZoom: maxZoom
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["TileLayer"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_2__["TileLayer"], {
         attribution: attribution,
         url: tileUrl,
         id: 'mapbox.dark',
         accessToken: accessToken
       }), conflicts.map(function (conflict) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["CircleMarker"], {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_2__["CircleMarker"], {
           key: conflict.properties.id,
           color: "red",
           radius: 5,
           center: [conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_1__["Popup"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_2__["Popup"], {
           key: "pop_".concat(conflict.properties.id)
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Notes: ", conflict.properties.notes), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Fatalities: ", conflict.properties.fatalities)));
       })))));
@@ -77768,7 +77770,7 @@ var partitionHTMLProps = function partitionHTMLProps(props) {
 /*!*************************************************************!*\
   !*** ./node_modules/semantic-ui-react/dist/es/lib/index.js ***!
   \*************************************************************/
-/*! exports provided: AutoControlledComponent, getChildMapping, mergeChildMappings, childrenUtils, useKeyOnly, useKeyOrValueAndKey, useValueAndKey, useMultipleProp, useTextAlignProp, useVerticalAlignProp, useWidthProp, customPropTypes, eventStack, getUnhandledProps, getElementType, htmlInputAttrs, htmlInputEvents, htmlInputProps, htmlImageProps, partitionHTMLProps, isBrowser, doesNodeContainClick, leven, createPaginationItems, SUI, numberToWordMap, numberToWord, normalizeOffset, normalizeTransitionDuration, objectDiff, handleRef, isRefObject, createShorthand, createShorthandFactory, createHTMLDivision, createHTMLIframe, createHTMLImage, createHTMLInput, createHTMLLabel, createHTMLParagraph */
+/*! exports provided: AutoControlledComponent, getChildMapping, mergeChildMappings, childrenUtils, useKeyOnly, useKeyOrValueAndKey, useValueAndKey, useMultipleProp, useTextAlignProp, useVerticalAlignProp, useWidthProp, customPropTypes, eventStack, createShorthand, createShorthandFactory, createHTMLDivision, createHTMLIframe, createHTMLImage, createHTMLInput, createHTMLLabel, createHTMLParagraph, getUnhandledProps, getElementType, htmlInputAttrs, htmlInputEvents, htmlInputProps, htmlImageProps, partitionHTMLProps, isBrowser, doesNodeContainClick, leven, createPaginationItems, SUI, numberToWordMap, numberToWord, normalizeOffset, normalizeTransitionDuration, objectDiff, handleRef, isRefObject */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

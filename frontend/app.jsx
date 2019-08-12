@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Segment, Sidebar } from 'semantic-ui-react';
 import { Map, TileLayer, Marker, Popup, Circle, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
 import Navbar from './Components/Navbar';
