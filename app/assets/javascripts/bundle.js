@@ -133,7 +133,7 @@ function (_Component) {
   _createClass(Filters, [{
     key: "render",
     value: function render() {
-      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
         as: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Segment"],
         direction: "right",
         animation: "overlay",

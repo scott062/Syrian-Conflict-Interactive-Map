@@ -4,27 +4,29 @@ import { Sidebar, Segment, Form, Header, Divider, Radio, Button } from 'semantic
 class Filters extends Component {
 
   render() {
-    <Sidebar
-      as={Segment}
-      direction='right'
-      animation='overlay'
-      icon='labeled'
-      visible={true}
-      width='very wide'
-      style={{
-        backgroundColor: 'grey',
-        zIndex: '5',
-        paddingRight: '9%'
-      }}
-    >
-      <Header
-        as="h1"
-        size="huge"
-        >
-        Filter Events
-      </Header>
+    return (
+      <Sidebar
+        as={Segment}
+        direction='right'
+        animation='overlay'
+        icon='labeled'
+        visible={true}
+        width='very wide'
+        style={{
+          backgroundColor: 'grey',
+          zIndex: '5',
+          paddingRight: '9%'
+        }}
+      >
+        <Header
+          as="h1"
+          size="huge"
+          >
+          Filter Events
+        </Header>
 
-    </Sidebar>
+      </Sidebar>
+    )
   }
 }
 
