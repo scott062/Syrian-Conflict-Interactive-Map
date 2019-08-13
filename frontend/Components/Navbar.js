@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image, Menu, Sidebar, Popup, Button, Icon } from 'semantic-ui-react';
 import Filters from './Filters'
-import filterIcon from './fitler-icon.png'
+import filterIcon from './filter-icon.png'
 
 class Navbar extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class Navbar extends Component {
         />
       <Popup trigger={
           <Menu.Item as='a' onClick={this.handleFilter}>
-            <Image src='./filter-icon.png'/>
+            <Image src={filterIcon} style={{margin: '10% auto'}}/>
           </Menu.Item>
         }
         content='Filter Events'
