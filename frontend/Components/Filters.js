@@ -17,11 +17,10 @@ class Filters extends Component {
         animation='overlay'
         icon='labeled'
         visible={true}
-        width='very wide'
+        width='wide'
         style={{
-          backgroundColor: 'grey',
-          zIndex: '5',
-          paddingRight: '9%'
+          backgroundColor: '#7a7a7a',
+          zIndex: '5'
         }}
       >
         <Header
@@ -59,7 +58,7 @@ class Filters extends Component {
           <p style={{fontWeight: '700'}}>Actors Involved</p>
           <Form.Group widths='equal'>
             <Form.Select
-              fluid 
+              fluid
               value = "hi"
               placeholder = "Actors"
               />

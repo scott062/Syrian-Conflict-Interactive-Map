@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/assets/images/filter-icon.png":
-/*!*******************************************!*\
-  !*** ./app/assets/images/filter-icon.png ***!
-  \*******************************************/
+/***/ "./app/assets/filter-icon.png":
+/*!************************************!*\
+  !*** ./app/assets/filter-icon.png ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -157,11 +157,10 @@ function (_Component) {
         animation: "overlay",
         icon: "labeled",
         visible: true,
-        width: "very wide",
+        width: "wide",
         style: {
-          backgroundColor: 'grey',
-          zIndex: '5',
-          paddingRight: '9%'
+          backgroundColor: '#7a7a7a',
+          zIndex: '5'
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Header"], {
         as: "h1",
@@ -220,8 +219,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
 /* harmony import */ var _Filters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Filters */ "./frontend/Components/Filters.js");
-/* harmony import */ var _app_assets_images_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../app/assets/images/filter-icon.png */ "./app/assets/images/filter-icon.png");
-/* harmony import */ var _app_assets_images_filter_icon_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _app_assets_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../app/assets/filter-icon.png */ "./app/assets/filter-icon.png");
+/* harmony import */ var _app_assets_filter_icon_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -232,9 +231,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -251,49 +250,15 @@ function (_Component) {
   _inherits(Navbar, _Component);
 
   function Navbar(props) {
-    var _this;
-
     _classCallCheck(this, Navbar);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Navbar).call(this, props));
-    _this.state = {
-      filterShow: false
-    };
-    _this.handleFilter = _this.handleFilter.bind(_assertThisInitialized(_this));
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Navbar).call(this, props));
   }
 
   _createClass(Navbar, [{
-    key: "handleFilter",
-    value: function handleFilter() {
-      this.setState({
-        filterShow: !this.state.filterShow
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
-        as: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"],
-        animation: "overlay",
-        direction: "right",
-        icon: "labeled",
-        inverted: true,
-        vertical: true,
-        visible: true,
-        width: "thin",
-        basic: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Popup"], {
-        trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
-          as: "a",
-          onClick: this.handleFilter
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Image"], {
-          src: _app_assets_images_filter_icon_png__WEBPACK_IMPORTED_MODULE_3___default.a
-        })),
-        content: "Filter Events",
-        position: "left center",
-        basic: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filters__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filters__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
