@@ -124,10 +124,17 @@ var Filters =
 function (_Component) {
   _inherits(Filters, _Component);
 
-  function Filters() {
+  function Filters(props) {
+    var _this;
+
     _classCallCheck(this, Filters);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Filters).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Filters).call(this, props));
+    _this.state = {
+      fatalities: '0',
+      actors: ''
+    };
+    return _this;
   }
 
   _createClass(Filters, [{
@@ -148,7 +155,37 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Header"], {
         as: "h1",
         size: "huge"
-      }, "Filter Events"));
+      }, "Filter Events"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Divider"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: '700'
+        }
+      }, "# of Reported Fatalities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"], {
+        size: "large"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Group, {
+        inline: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Field, {
+        control: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Radio"],
+        label: "<5",
+        value: "<5"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Field, {
+        control: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Radio"],
+        label: "5 < 10",
+        value: "5 < 10"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Field, {
+        control: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Radio"],
+        label: ">10",
+        value: ">10"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: '700'
+        }
+      }, "Actors Involved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Group, {
+        widths: "equal"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Select, {
+        fluid: true,
+        value: "hi",
+        placeholder: "Actors"
+      }))));
     }
   }]);
 

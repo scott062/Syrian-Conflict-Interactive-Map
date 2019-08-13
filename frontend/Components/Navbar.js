@@ -5,7 +5,7 @@ import Filters from './Filters'
 class Navbar extends Component {
   constructor(props) {
     super(props);
-    this.state = { filterShow: false }
+    this.state = { filterShow: false };
     this.handleFilter = this.handleFilter.bind(this);
   }
 
