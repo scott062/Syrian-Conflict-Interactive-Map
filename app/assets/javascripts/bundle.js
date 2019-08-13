@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/images/filter-icon.png":
+/*!*******************************************!*\
+  !*** ./app/assets/images/filter-icon.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "3d079da3673a34f3f2e1b9785234e71e.png";
+
+/***/ }),
+
 /***/ "./frontend/Components/Filters.js":
 /*!****************************************!*\
   !*** ./frontend/Components/Filters.js ***!
@@ -209,8 +220,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
 /* harmony import */ var _Filters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Filters */ "./frontend/Components/Filters.js");
-/* harmony import */ var _filter_icon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter-icon.png */ "./frontend/Components/filter-icon.png");
-/* harmony import */ var _filter_icon_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _app_assets_images_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../app/assets/images/filter-icon.png */ "./app/assets/images/filter-icon.png");
+/* harmony import */ var _app_assets_images_filter_icon_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_images_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -277,11 +288,7 @@ function (_Component) {
           as: "a",
           onClick: this.handleFilter
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Image"], {
-          src: _filter_icon_png__WEBPACK_IMPORTED_MODULE_3___default.a,
-          style: {
-            width: '50%',
-            margin: '10% auto'
-          }
+          src: _app_assets_images_filter_icon_png__WEBPACK_IMPORTED_MODULE_3___default.a
         })),
         content: "Filter Events",
         position: "left center",
@@ -294,17 +301,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
-
-/***/ }),
-
-/***/ "./frontend/Components/filter-icon.png":
-/*!*********************************************!*\
-  !*** ./frontend/Components/filter-icon.png ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "3d079da3673a34f3f2e1b9785234e71e.png";
 
 /***/ }),
 
