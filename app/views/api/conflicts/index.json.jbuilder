@@ -7,6 +7,7 @@ json.set! "features" do
       json.region conflict["region"]
       json.notes conflict["notes"]
       json.fatalities conflict["fatalities"]
+      json.actor conflict["actor1"]
     end
     json.set! "geometry" do
       json.type "Point"
