@@ -33,6 +33,10 @@ class App extends Component {
     })
   }
 
+  handleFilter() {
+    
+  }
+
   render() {
     const conflicts = this.state.conflicts
     return (

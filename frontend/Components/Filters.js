@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Sidebar, Segment, Form, Header, Divider, Radio, Button } from 'semantic-ui-react';
+import { Sidebar, Segment, Form, Header, Divider, Button } from 'semantic-ui-react';
 const actors = [
         {
             "key": "Military Forces of Syria (2000-)",
@@ -174,9 +174,19 @@ class Filters extends Component {
     this.state = {
       actor: '',
     }
+    this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.handleFilter(this.state.actor);
+  }
+  update(property) {
+    return e => this.setState({ [property]: e.target.value })
   }
 
   render() {
+    let actor = this.state.actor
     return (
       <Sidebar
         as={Segment}
@@ -202,13 +212,13 @@ class Filters extends Component {
         <p style={{fontWeight: '300', color: 'orange'}}>BETWEEN 5 AND 10</p>
         <p style={{fontWeight: '300', color: 'red'}}>GREATER THAN 10</p>
         <Form size='large'>
-
           <p style={{fontWeight: '700'}}>Actors Involved</p>
           <Form.Group widths='equal'>
             <Form.Select
               fluid options = {actors}
-              value = "hi"
+              value = {this.state.actor}
               placeholder = "Actors"
+              onChange = {this.update('actor')}
               />
           </Form.Group>
         </Form>
