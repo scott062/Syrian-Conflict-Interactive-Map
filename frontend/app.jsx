@@ -21,6 +21,8 @@ class App extends Component {
       mapCenter: [34.854, 38.995]
     }
     this.handleFilter = this.handleFilter.bind(this);
+    this.handleReset = this.handleReset.bind(this);
+    this.fetchConflicts = this.fetchConflicts.bind(this);
   }
 
   componentDidMount() {
@@ -37,9 +39,13 @@ class App extends Component {
 
   handleFilter(actor) {
     let filteredResults = this.state.conflicts.filter(conflict =>
-      conflict.properties.actor == {actor}
+      (conflict.properties.actor == actor)
     )
-    this.setState({conflicts: {filteredResults}})
+    this.setState({conflicts: filteredResults})
+  }
+
+  handleReset() {
+    this.fetchConflicts();
   }
 
   render() {
@@ -50,7 +56,7 @@ class App extends Component {
           as={Segment}
           style={{height: '100vh', overflow: 'hidden'}}
         >
-        <Filters handleFilter={this.handleFilter}/>
+        <Filters handleFilter={this.handleFilter} handleReset={this.handleReset}/>
         <Sidebar.Pusher
           style={{height: '100vh', color: 'green'}}>
         <Map

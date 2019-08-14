@@ -175,17 +175,21 @@ class Filters extends Component {
       actor: '',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.reset = this.reset.bind(this);
     this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.props.handleFilter(this.state.actor);
   }
 
+  reset() {
+    this.setState({actor: ''});
+    this.props.handleReset();
+  }
+
   update(property) {
-    debugger
     return e => this.setState({ [property]: e.target.innerText })
   }
 
@@ -193,48 +197,48 @@ class Filters extends Component {
     let actor = this.state.actor
     return (
       <div>
-      <Sidebar
-        as={Segment}
-        direction='right'
-        animation='overlay'
-        icon='labeled'
-        visible={true}
-        width='wide'
-        style={{
-          backgroundColor: 'rgb(80, 80, 80, 1)',
-          zIndex: '5'
-        }}
-      >
-        <Header
-          as="h1"
-          size="huge"
-          >
-          Filter Events
-        </Header>
-        <Divider/>
-        <p style={{fontWeight: '700'}}># of Reported Fatalities</p>
-        <p style={{fontWeight: '300', color: 'grey'}}>LESS THAN 5</p>
-        <p style={{fontWeight: '300', color: 'orange'}}>BETWEEN 5 AND 10</p>
-        <p style={{fontWeight: '300', color: 'red'}}>GREATER THAN 10</p>
-        <Divider/>
-        <Form size='large' onSubmit={this.handleSubmit}>
-          <p style={{fontWeight: '700'}}>Actors Involved</p>
-          <Form.Group widths='equal'>
-            <Form.Select
-              fluid options = {actors}
-              value = {this.state.actor}
-              placeholder = "Actors"
-              onChange = {this.update('actor')}
-              />
-          </Form.Group>
-          <Button type='submit'>
-            Filter
-          </Button>
-          <Button>
-            Reset
-          </Button>
-        </Form>
-      </Sidebar>
+        <Sidebar
+          as={Segment}
+          direction='right'
+          animation='overlay'
+          icon='labeled'
+          visible={true}
+          width='wide'
+          style={{
+            backgroundColor: 'rgb(80, 80, 80, 1)',
+            zIndex: '5'
+          }}
+        >
+          <Header
+            as="h1"
+            size="huge"
+            >
+            Filter Events
+          </Header>
+          <Divider/>
+          <p style={{fontWeight: '700'}}># of Reported Fatalities</p>
+          <p style={{fontWeight: '300', color: 'grey'}}>LESS THAN 5</p>
+          <p style={{fontWeight: '300', color: 'orange'}}>BETWEEN 5 AND 10</p>
+          <p style={{fontWeight: '300', color: 'red'}}>GREATER THAN 10</p>
+          <Divider/>
+          <Form size='large' onSubmit={this.handleSubmit}>
+            <p style={{fontWeight: '700'}}>Actors Involved</p>
+            <Form.Group widths='equal'>
+              <Form.Select
+                fluid options = {actors}
+                value = {this.state.actor}
+                placeholder = "Actors"
+                onChange = {this.update('actor')}
+                />
+            </Form.Group>
+            <Button type='submit'>
+              Filter
+            </Button>
+            <Button onClick={this.reset}>
+              Reset
+            </Button>
+          </Form>
+        </Sidebar>
       </div>
     )
   }

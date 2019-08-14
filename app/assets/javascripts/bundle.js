@@ -269,6 +269,7 @@ function (_Component) {
       actor: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.reset = _this.reset.bind(_assertThisInitialized(_this));
     _this.update = _this.update.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -277,15 +278,21 @@ function (_Component) {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
-      debugger;
       this.props.handleFilter(this.state.actor);
+    }
+  }, {
+    key: "reset",
+    value: function reset() {
+      this.setState({
+        actor: ''
+      });
+      this.props.handleReset();
     }
   }, {
     key: "update",
     value: function update(property) {
       var _this2 = this;
 
-      debugger;
       return function (e) {
         return _this2.setState(_defineProperty({}, property, e.target.innerText));
       };
@@ -344,7 +351,9 @@ function (_Component) {
         onChange: this.update('actor')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], {
         type: "submit"
-      }, "Filter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Reset"))));
+      }, "Filter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+        onClick: this.reset
+      }, "Reset"))));
     }
   }]);
 
@@ -418,6 +427,8 @@ function (_Component) {
       mapCenter: [34.854, 38.995]
     };
     _this.handleFilter = _this.handleFilter.bind(_assertThisInitialized(_this));
+    _this.handleReset = _this.handleReset.bind(_assertThisInitialized(_this));
+    _this.fetchConflicts = _this.fetchConflicts.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -444,15 +455,16 @@ function (_Component) {
     key: "handleFilter",
     value: function handleFilter(actor) {
       var filteredResults = this.state.conflicts.filter(function (conflict) {
-        return conflict.properties.actor == {
-          actor: actor
-        };
+        return conflict.properties.actor == actor;
       });
       this.setState({
-        conflicts: {
-          filteredResults: filteredResults
-        }
+        conflicts: filteredResults
       });
+    }
+  }, {
+    key: "handleReset",
+    value: function handleReset() {
+      this.fetchConflicts();
     }
   }, {
     key: "render",
@@ -467,7 +479,8 @@ function (_Component) {
           overflow: 'hidden'
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        handleFilter: this.handleFilter
+        handleFilter: this.handleFilter,
+        handleReset: this.handleReset
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pusher, {
         style: {
           height: '100vh',
