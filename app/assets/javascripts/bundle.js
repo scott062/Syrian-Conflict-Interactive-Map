@@ -269,9 +269,15 @@ function (_Component) {
   _inherits(Filters, _Component);
 
   function Filters(props) {
+    var _this;
+
     _classCallCheck(this, Filters);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Filters).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Filters).call(this, props));
+    _this.state = {
+      actor: ''
+    };
+    return _this;
   }
 
   _createClass(Filters, [{
@@ -285,7 +291,7 @@ function (_Component) {
         visible: true,
         width: "wide",
         style: {
-          backgroundColor: '#7a7a7a',
+          backgroundColor: 'rgb(80, 80, 80, 1)',
           zIndex: '5'
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Header"], {
@@ -295,23 +301,24 @@ function (_Component) {
         style: {
           fontWeight: '700'
         }
-      }, "# of Reported Fatalities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"], {
+      }, "# of Reported Fatalities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: '300',
+          color: 'grey'
+        }
+      }, "LESS THAN 5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: '300',
+          color: 'orange'
+        }
+      }, "BETWEEN 5 AND 10"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: '300',
+          color: 'red'
+        }
+      }, "GREATER THAN 10"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"], {
         size: "large"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Group, {
-        inline: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Field, {
-        control: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Radio"],
-        label: "<5",
-        value: "<5"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Field, {
-        control: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Radio"],
-        label: "5 < 10",
-        value: "5 < 10"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Form"].Field, {
-        control: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Radio"],
-        label: ">10",
-        value: ">10"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         style: {
           fontWeight: '700'
         }
@@ -322,7 +329,9 @@ function (_Component) {
         options: actors,
         value: "hi",
         placeholder: "Actors"
-      }))));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+        type: "submit"
+      }, "Filter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Reset"));
     }
   }]);
 
@@ -454,7 +463,6 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this));
     _this.state = {
       conflicts: [],
-      actors: [],
       zoom: 8,
       mapCenter: [34.854, 38.995]
     };

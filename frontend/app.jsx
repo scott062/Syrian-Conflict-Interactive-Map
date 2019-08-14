@@ -16,7 +16,6 @@ class App extends Component {
     super();
     this.state = {
       conflicts: [],
-      actors: [],
       zoom: 8,
       mapCenter: [34.854, 38.995]
     }

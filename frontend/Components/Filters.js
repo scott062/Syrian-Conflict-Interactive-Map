@@ -171,6 +171,9 @@ const actors = [
 class Filters extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      actor: '',
+    }
   }
 
   render() {
@@ -183,7 +186,7 @@ class Filters extends Component {
         visible={true}
         width='wide'
         style={{
-          backgroundColor: '#7a7a7a',
+          backgroundColor: 'rgb(80, 80, 80, 1)',
           zIndex: '5'
         }}
       >
@@ -195,30 +198,11 @@ class Filters extends Component {
         </Header>
         <Divider/>
         <p style={{fontWeight: '700'}}># of Reported Fatalities</p>
+        <p style={{fontWeight: '300', color: 'grey'}}>LESS THAN 5</p>
+        <p style={{fontWeight: '300', color: 'orange'}}>BETWEEN 5 AND 10</p>
+        <p style={{fontWeight: '300', color: 'red'}}>GREATER THAN 10</p>
         <Form size='large'>
-          <Form.Group inline>
-            <Form.Field
-              control={Radio}
-              label='<5'
-              value='<5'
 
-
-              />
-            <Form.Field
-              control={Radio}
-              label='5 < 10'
-              value='5 < 10'
-
-
-              />
-            <Form.Field
-              control={Radio}
-              label='>10'
-              value='>10'
-
-
-              />
-          </Form.Group>
           <p style={{fontWeight: '700'}}>Actors Involved</p>
           <Form.Group widths='equal'>
             <Form.Select
@@ -228,7 +212,12 @@ class Filters extends Component {
               />
           </Form.Group>
         </Form>
-
+        <Button type='submit'>
+          Filter
+        </Button>
+        <Button>
+          Reset
+        </Button>
       </Sidebar>
     )
   }
