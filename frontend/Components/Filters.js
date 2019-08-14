@@ -181,7 +181,7 @@ class Filters extends Component {
     e.preventDefault();
     this.props.handleFilter(this.state.actor);
   }
-  
+
   update(property) {
     return e => this.setState({ [property]: e.target.value })
   }
@@ -212,7 +212,8 @@ class Filters extends Component {
         <p style={{fontWeight: '300', color: 'grey'}}>LESS THAN 5</p>
         <p style={{fontWeight: '300', color: 'orange'}}>BETWEEN 5 AND 10</p>
         <p style={{fontWeight: '300', color: 'red'}}>GREATER THAN 10</p>
-        <Form size='large'>
+        <Divider/>
+        <Form size='large' onSubmit={this.handleSubmit}>
           <p style={{fontWeight: '700'}}>Actors Involved</p>
           <Form.Group widths='equal'>
             <Form.Select
@@ -222,13 +223,13 @@ class Filters extends Component {
               onChange = {this.update('actor')}
               />
           </Form.Group>
+          <Button type='submit'>
+            Filter
+          </Button>
+          <Button>
+            Reset
+          </Button>
         </Form>
-        <Button type='submit'>
-          Filter
-        </Button>
-        <Button>
-          Reset
-        </Button>
       </Sidebar>
     )
   }
