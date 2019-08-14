@@ -16,9 +16,12 @@ class App extends Component {
     super();
     this.state = {
       conflicts: [],
+      actor: '',
+      actors: [],
       zoom: 8,
       mapCenter: [34.854, 38.995]
     }
+    this.handleFilter.bind(this);
   }
 
   componentDidMount() {
@@ -33,8 +36,12 @@ class App extends Component {
     })
   }
 
-  handleFilter() {
-    
+  handleFilter(actor) {
+    this.setState({actor: {actor}})
+    let filteredResults = this.state.conflicts.filter(conflict =>
+      conflict.properties.actor === this.state.actor
+    )
+    this.setState({conflicts: {filteredResults}})
   }
 
   render() {

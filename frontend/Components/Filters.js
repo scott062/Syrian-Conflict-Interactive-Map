@@ -181,6 +181,7 @@ class Filters extends Component {
     e.preventDefault();
     this.props.handleFilter(this.state.actor);
   }
+  
   update(property) {
     return e => this.setState({ [property]: e.target.value })
   }

@@ -453,9 +453,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -485,9 +485,14 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this));
     _this.state = {
       conflicts: [],
+      actor: '',
+      actors: [],
       zoom: 8,
       mapCenter: [34.854, 38.995]
     };
+
+    _this.handleFilter.bind(_assertThisInitialized(_this));
+
     return _this;
   }
 
@@ -512,11 +517,27 @@ function (_Component) {
     }
   }, {
     key: "handleFilter",
-    value: function handleFilter() {}
+    value: function handleFilter(actor) {
+      var _this3 = this;
+
+      this.setState({
+        actor: {
+          actor: actor
+        }
+      });
+      var filteredResults = this.state.conflicts.filter(function (conflict) {
+        return conflict.properties.actor === _this3.state.actor;
+      });
+      this.setState({
+        conflicts: {
+          filteredResults: filteredResults
+        }
+      });
+    }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       var conflicts = this.state.conflicts;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pushable, {
@@ -532,7 +553,7 @@ function (_Component) {
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_2__["Map"], {
         ref: function ref(m) {
-          _this3.leafletMap = m;
+          _this4.leafletMap = m;
         },
         id: "map",
         center: this.state.mapCenter,
