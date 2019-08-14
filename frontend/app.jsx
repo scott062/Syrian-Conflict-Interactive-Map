@@ -16,6 +16,7 @@ class App extends Component {
     super();
     this.state = {
       conflicts: [],
+      actors: [],
       zoom: 8,
       mapCenter: [34.854, 38.995]
     }
@@ -29,7 +30,7 @@ class App extends Component {
     fetch('http://localhost:3000/api/conflicts')
     .then(res => res.json())
     .then( data => {
-      this.setState({conflicts: data.features})
+      this.setState({conflicts: data.features, actors: data.actors})
     })
   }
 
@@ -58,19 +59,50 @@ class App extends Component {
             accessToken={accessToken}
           />
         {conflicts.map(conflict => {
-          return (
-            <CircleMarker
-              key={conflict.properties.id}
-              color="red"
-              radius={5}
-              center={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
-              >
-              <Popup key={`pop_${conflict.properties.id}`}>
-                <div>Notes: {conflict.properties.notes}</div>
-                <div>Fatalities: {conflict.properties.fatalities}</div>
-              </Popup>
-            </CircleMarker>
-          )
+          let integer = conflict.properties.fatalities
+          if (parseInt(integer) < 5) {
+            return (
+              <CircleMarker
+                key={conflict.properties.id}
+                color="grey"
+                radius={5}
+                center={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
+                >
+                <Popup key={`pop_${conflict.properties.id}`}>
+                  <div>Notes: {conflict.properties.notes}</div>
+                  <div>Fatalities: {conflict.properties.fatalities}</div>
+                </Popup>
+              </CircleMarker>
+            )
+          } else if (parseInt(integer) < 10) {
+            return (
+              <CircleMarker
+                key={conflict.properties.id}
+                color="orange"
+                radius={5}
+                center={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
+                >
+                <Popup key={`pop_${conflict.properties.id}`}>
+                  <div>Notes: {conflict.properties.notes}</div>
+                  <div>Fatalities: {conflict.properties.fatalities}</div>
+                </Popup>
+              </CircleMarker>
+            )
+          } else {
+            return (
+              <CircleMarker
+                key={conflict.properties.id}
+                color="red"
+                radius={5}
+                center={[conflict.geometry.coordinates[1], conflict.geometry.coordinates[0]]}
+                >
+                <Popup key={`pop_${conflict.properties.id}`}>
+                  <div>Notes: {conflict.properties.notes}</div>
+                  <div>Fatalities: {conflict.properties.fatalities}</div>
+                </Popup>
+              </CircleMarker>
+            )
+          }
         })}
         </Map>
       </Sidebar.Pusher>

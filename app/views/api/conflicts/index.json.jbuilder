@@ -17,5 +17,9 @@ json.set! "features" do
 end
 
 json.actors do
-  json.array! @actors
+  json.array! @actors do |actor|
+    json.key actor
+    json.text actor
+    json.value actor
+  end
 end
