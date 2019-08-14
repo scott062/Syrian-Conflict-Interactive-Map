@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/assets/filter-icon.png":
-/*!************************************!*\
-  !*** ./app/assets/filter-icon.png ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "3d079da3673a34f3f2e1b9785234e71e.png";
-
-/***/ }),
-
 /***/ "./frontend/Components/Filters.js":
 /*!****************************************!*\
   !*** ./frontend/Components/Filters.js ***!
@@ -270,18 +259,17 @@ var Filters =
 function (_Component) {
   _inherits(Filters, _Component);
 
-  function Filters(props) {
+  function Filters() {
     var _this;
 
     _classCallCheck(this, Filters);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Filters).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Filters).call(this));
     _this.state = {
       actor: ''
     };
-
-    _this.handleSubmit.bind(_assertThisInitialized(_this));
-
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.update = _this.update.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -289,6 +277,7 @@ function (_Component) {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
+      debugger;
       this.props.handleFilter(this.state.actor);
     }
   }, {
@@ -296,15 +285,16 @@ function (_Component) {
     value: function update(property) {
       var _this2 = this;
 
+      debugger;
       return function (e) {
-        return _this2.setState(_defineProperty({}, property, e.target.value));
+        return _this2.setState(_defineProperty({}, property, e.target.innerText));
       };
     }
   }, {
     key: "render",
     value: function render() {
       var actor = this.state.actor;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
         as: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Segment"],
         direction: "right",
         animation: "overlay",
@@ -354,7 +344,7 @@ function (_Component) {
         onChange: this.update('actor')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], {
         type: "submit"
-      }, "Filter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Reset")));
+      }, "Filter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Reset"))));
     }
   }]);
 
@@ -362,69 +352,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Filters);
-
-/***/ }),
-
-/***/ "./frontend/Components/Navbar.js":
-/*!***************************************!*\
-  !*** ./frontend/Components/Navbar.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
-/* harmony import */ var _Filters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Filters */ "./frontend/Components/Filters.js");
-/* harmony import */ var _app_assets_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../app/assets/filter-icon.png */ "./app/assets/filter-icon.png");
-/* harmony import */ var _app_assets_filter_icon_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_assets_filter_icon_png__WEBPACK_IMPORTED_MODULE_3__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-var Navbar =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Navbar, _Component);
-
-  function Navbar(props) {
-    _classCallCheck(this, Navbar);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Navbar).call(this, props));
-  }
-
-  _createClass(Navbar, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filters__WEBPACK_IMPORTED_MODULE_2__["default"], null));
-    }
-  }]);
-
-  return Navbar;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
 /***/ }),
 
@@ -443,7 +370,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/Navbar */ "./frontend/Components/Navbar.js");
+/* harmony import */ var _Components_Filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/Filters */ "./frontend/Components/Filters.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -486,14 +413,11 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this));
     _this.state = {
       conflicts: [],
-      actor: '',
       actors: [],
       zoom: 8,
       mapCenter: [34.854, 38.995]
     };
-
-    _this.handleFilter.bind(_assertThisInitialized(_this));
-
+    _this.handleFilter = _this.handleFilter.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -519,15 +443,10 @@ function (_Component) {
   }, {
     key: "handleFilter",
     value: function handleFilter(actor) {
-      var _this3 = this;
-
-      this.setState({
-        actor: {
-          actor: actor
-        }
-      });
       var filteredResults = this.state.conflicts.filter(function (conflict) {
-        return conflict.properties.actor === _this3.state.actor;
+        return conflict.properties.actor == {
+          actor: actor
+        };
       });
       this.setState({
         conflicts: {
@@ -538,7 +457,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this4 = this;
+      var _this3 = this;
 
       var conflicts = this.state.conflicts;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pushable, {
@@ -547,14 +466,16 @@ function (_Component) {
           height: '100vh',
           overflow: 'hidden'
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pusher, {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        handleFilter: this.handleFilter
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pusher, {
         style: {
           height: '100vh',
           color: 'green'
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_2__["Map"], {
         ref: function ref(m) {
-          _this4.leafletMap = m;
+          _this3.leafletMap = m;
         },
         id: "map",
         center: this.state.mapCenter,

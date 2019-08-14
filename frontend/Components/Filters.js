@@ -169,26 +169,30 @@ const actors = [
     ];
 
 class Filters extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       actor: '',
     }
-    this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     this.props.handleFilter(this.state.actor);
   }
 
   update(property) {
-    return e => this.setState({ [property]: e.target.value })
+    debugger
+    return e => this.setState({ [property]: e.target.innerText })
   }
 
   render() {
     let actor = this.state.actor
     return (
+      <div>
       <Sidebar
         as={Segment}
         direction='right'
@@ -231,6 +235,7 @@ class Filters extends Component {
           </Button>
         </Form>
       </Sidebar>
+      </div>
     )
   }
 }

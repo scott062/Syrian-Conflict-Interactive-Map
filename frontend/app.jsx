@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Segment, Sidebar } from 'semantic-ui-react';
 import { Map, TileLayer, Marker, Popup, Circle, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
-import Navbar from './Components/Navbar';
+import Filters from './Components/Filters';
 
 //Mapbox base map info
 const accessToken = "pk.eyJ1Ijoic2NvdHQwNjIiLCJhIjoiY2p5bHpuczh4MGR4ZTNscXVyODltZXIzbCJ9.gdmp7BhGHT0YVUMFfgh_gg"
@@ -16,12 +16,11 @@ class App extends Component {
     super();
     this.state = {
       conflicts: [],
-      actor: '',
       actors: [],
       zoom: 8,
       mapCenter: [34.854, 38.995]
     }
-    this.handleFilter.bind(this);
+    this.handleFilter = this.handleFilter.bind(this);
   }
 
   componentDidMount() {
@@ -37,22 +36,21 @@ class App extends Component {
   }
 
   handleFilter(actor) {
-    this.setState({actor: {actor}})
     let filteredResults = this.state.conflicts.filter(conflict =>
-      conflict.properties.actor === this.state.actor
+      conflict.properties.actor == {actor}
     )
     this.setState({conflicts: {filteredResults}})
   }
 
   render() {
-    const conflicts = this.state.conflicts
+    let conflicts = this.state.conflicts
     return (
       <div>
         <Sidebar.Pushable
           as={Segment}
           style={{height: '100vh', overflow: 'hidden'}}
         >
-        <Navbar/>
+        <Filters handleFilter={this.handleFilter}/>
         <Sidebar.Pusher
           style={{height: '100vh', color: 'green'}}>
         <Map
